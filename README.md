@@ -37,6 +37,8 @@ crontab -e
  
 至此所有步驟完成，當IP變更時腳本會自動更新A紀錄指向您的域名
 
+编译安装shadowsocks-libev
+
 wget https://raw.githubusercontent.com/happy201807/docker-install-shadowsocks-libev/master/shadowsocks.sh && bash shadowsocks.sh
 
 编辑配置文件nano /etc/ss.json
