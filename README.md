@@ -8,13 +8,15 @@ ddns.sh
 
 shadowsocks.sh
 
-wget  && bash shadowsocks.sh
+wget https://raw.githubusercontent.com/happy201807/ddns-obfs/main/shadowsocks.sh && bash shadowsocks.sh
 
-编辑配置文件nano /etc/ss.json
+编辑配置文件
+
+nano /etc/ss.json
 
 安装BBR加速
 
-wget --no-check-certificate https://www.rhce.net/linux/bbr.sh
+wget --no-check-certificate 
 
 chmod +x bbr.sh
 
@@ -26,19 +28,11 @@ lsmod | grep bbr    查看是否加载
 
 编译安装obfs
 
-sudo yum install gcc autoconf libtool automake make zlib-devel openssl-devel asciidoc xmlto  -y
+obfs.sh
 
-git clone https://github.com/shadowsocks/simple-obfs.git
+添加启动服务  
 
-git submodule update --init --recursive
-
-./autogen.sh
-
-./configure && make
-
-make install
-
-添加启动服务  进入/usr/lib/systemd/system增加shadowsocks.service文件
+进入/usr/lib/systemd/system增加shadowsocks.service文件
 
 开机启动服务
 
