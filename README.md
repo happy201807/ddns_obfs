@@ -16,7 +16,7 @@ ss.json
 
 安装BBR加速
 
-wget --no-check-certificate https://raw.githubusercontent.com/happy201807/ddns-obfs/main/bbr.sh && chmod +x bbr.sh && ./bbr.sh
+wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
 
 重启
 
