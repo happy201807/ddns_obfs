@@ -18,9 +18,6 @@ ss.json
 
 wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
 
-重启
-
-lsmod | grep bbr    查看是否加载
 
 编译安装obfs
 
