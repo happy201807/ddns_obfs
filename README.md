@@ -1,45 +1,14 @@
 # ddns-obfs
 
-使用腳本讓VPS自動更新DDNS
+使用腳本讓VPS自動更新DDNS  
 
-##Debian/Ubuntu
-
-apt-get update
-
-apt-get install curl -y
-
-##CentOS
-
-yum update -y
-
-yum install curl -y
-
-使用CURL提交測試，注意修改您的信息
-
-hostname=您申請的域名
-
-password=您Dynu帳戶的IP密碼
-
-curl "https://api.dynu.com/nic/update?hostname=您申請的域名&password=您Dynu帳戶的IP密碼"
-
-## 返回下面信息表示成功 ##
-
-good xxx.xxx.xxx.xxx (IP地址)
-
-設定定時更新
-
-crontab -e
-
-按i进入编辑模式，貼上下方命令，並按esc一下，再输入:wq保存
-
-*/1 * * * * curl "https://api.dynu.com/nic/update?hostname=您申請的域名&password=您Dynu帳戶的IP密碼"
- > /dev/null 2>&1
- 
-至此所有步驟完成，當IP變更時腳本會自動更新A紀錄指向您的域名
+ddns.sh
 
 编译安装shadowsocks-libev
 
-wget https://raw.githubusercontent.com/happy201807/docker-install-shadowsocks-libev/master/shadowsocks.sh && bash shadowsocks.sh
+shadowsocks.sh
+
+wget  && bash shadowsocks.sh
 
 编辑配置文件nano /etc/ss.json
 
