@@ -25,11 +25,11 @@ wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-
 
 obfs.sh
 
-添加启动服务   进入/usr/lib/systemd/system增加shadowsocks.service文件
+添加启动服务   
 
-shadowsocks.service
+nano /usr/lib/systemd/system/shadowsocks.service
 
-开机启动服务
+开机自启动服务
 
 systemctl daemon-reload
 
