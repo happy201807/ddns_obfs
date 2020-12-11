@@ -1,5 +1,8 @@
 # ddns-obfs
 
+http://oglopss.github.io/ctng-ss-jekyll/
+
+
 CentOS 7.0
 
 使用腳本讓VPS自動更新DDNS  
