@@ -1,6 +1,5 @@
-# ddns-obfs
+obfs
 
-http://oglopss.github.io/ctng-ss-jekyll/
 
 
 CentOS 7.0
