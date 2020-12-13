@@ -1,0 +1,24 @@
+首先路由器要root，能够用ssh登录，登陆后
+
+vi /etc/firewall.user
+1
+vi /etc/firewall.user
+或者winscp登陆，直接复制粘贴。
+
+在/etc/firewall.user上增加两条规则即可：
+
+iptables -t nat -A PREROUTING -s 192.168.1.1/24 -p udp --dport 53 -j DNAT --to 192.168.1.1
+iptables -t nat -A PREROUTING -s 192.168.1.1/24 -p tcp --dport 53 -j DNAT --to 192.168.1.1
+1
+2
+iptables -t nat -A PREROUTING -s 192.168.1.1/24 -p udp --dport 53 -j DNAT --to 192.168.1.1
+iptables -t nat -A PREROUTING -s 192.168.1.1/24 -p tcp --dport 53 -j DNAT --to 192.168.1.1
+192.168.1.1是路由器IP，亲们根据自己的路由器改正。
+
+其实只有第一条就足够了，DNS解析都是UDP。
+
+或
+
+#暂时不用这个代码
+iptables -I PREROUTING -t nat -p udp -d 8.8.4.4 --dport 53 -j REDIRECT --to-ports 53
+iptables -I PREROUTING -t nat -p udp -d 8.8.8.8 --dport 53 -j REDIRECT --to-ports 53
