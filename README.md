@@ -11,7 +11,7 @@ Docker
 
  yum/apt update && yum/apt install curl
 
-curl -fLsS https://get.docker.com/ | sh
+curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
 
 
 
