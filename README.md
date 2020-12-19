@@ -13,7 +13,13 @@ Docker
 
 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
 
+acme.sh
 
+git clone https://github.com/Neilpang/acme.sh.git
+
+cd acme.sh
+
+./acme.sh --install
 
 
 编译安装shadowsocks-libev
