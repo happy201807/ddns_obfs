@@ -1,5 +1,4 @@
-obfs
-
+v2-plugin
 
 
 CentOS 7.0
@@ -7,6 +6,14 @@ CentOS 7.0
 使用腳本讓VPS自動更新DDNS  
 
 ddns.sh
+
+Docker  
+
+yum/apt install curl
+
+curl -fLsS https://get.docker.com/ | sh
+
+
 
 
 编译安装shadowsocks-libev
