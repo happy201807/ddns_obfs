@@ -9,7 +9,7 @@ ddns.sh
 
 Docker  
 
-yum/apt install curl
+ yum/apt update && yum/apt install curl
 
 curl -fLsS https://get.docker.com/ | sh
 
