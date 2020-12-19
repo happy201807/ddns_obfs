@@ -32,6 +32,10 @@ Ok, let's issue a cert now:
 acme.sh --issue --dns dns_dynu -d example.com -d www.example.com
 The Dynu_ClientId and Dynu_Secret will be saved in ~/.acme.sh/account.conf and will be reused when needed.
 
+sudo certbot --manual --preferred-challenges dns certonly
+
+nslookup -q=TXT _acme-challenge.二级域名 1.1.1.1
+
 编译安装shadowsocks-libev
 
 shadowsocks.sh
