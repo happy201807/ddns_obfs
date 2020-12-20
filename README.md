@@ -1,7 +1,7 @@
 v2-plugin TLS
 
 
-ENV  CentOS 7.0
+ENV  Debian 9
 
 使用腳本讓VPS自動更新DDNS  
 
@@ -10,7 +10,7 @@ ddns.sh
 
 安装Docker  
 
-yum update && yum install curl
+apt update && apt install curl
 
 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
 
@@ -28,7 +28,7 @@ docker container rm $(docker container ps -aq)
 
 
 
-安装BBR加速
+安装暴力BBR加速
 
 wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
 
