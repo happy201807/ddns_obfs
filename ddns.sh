@@ -2,7 +2,7 @@
 apt-get update
 apt-get install curl git python3
 
-git clone https://github.com/timothymiller/cloudflare-ddns
+git clone https://github.com/timothymiller/cloudflare-ddns.git
 cd cloudflare-ddns
 cp config-example.json config.json
 nano config.json  ##gist
