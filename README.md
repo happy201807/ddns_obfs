@@ -28,7 +28,7 @@ docker container rm $(docker container ps -aq)
 
 
 
-安装暴力BBR加速
+安装BBR plus加速
 
 wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
 
