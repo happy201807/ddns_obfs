@@ -16,7 +16,7 @@ curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
 
 docker pull acrisliu/shadowsocks-libev
 
-docker.yml
+docker run.yml
 
 （停止并重新运行docker）
 
