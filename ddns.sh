@@ -7,10 +7,12 @@ cd cloudflare-ddns
 cp config-example.json config.json
 nano config.json  ##gist
 chmod 777 *
+./start-sync.sh
 
-./docker-build.sh
+crontab -e
 
-docker run -d timothyjmiller/cloudflare_ddns:latest
+*/15 * * * * /root/cloudflare-ddns/start-sync.sh
+
 
 
 
