@@ -2,10 +2,6 @@
 apt-get update
 apt-get install curl git -y
 
-##CentOS
-yum update -y
-yum install curl git -y
-
 git clone https://github.com/timothymiller/cloudflare-ddns
 cd cloudflare-ddns
 chmod +x ./start-sync.sh
