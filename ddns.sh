@@ -6,12 +6,11 @@ git clone https://github.com/timothymiller/cloudflare-ddns
 cd cloudflare-ddns
 cp config-example.json config.json
 nano config.json  ##gist
-chmod +x ./start-sync.sh
-./start-sync.sh
+chmod 777 *
 
-crontab -e
+./docker-build.sh
 
-*/15 * * * * /root/cloudflare-ddns/start-sync.sh
+docker run -d timothyjmiller/cloudflare_ddns:latest
 
 
 
