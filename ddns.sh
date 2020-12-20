@@ -1,11 +1,27 @@
 ##Debian/Ubuntu
 apt-get update
-apt-get install curl -y
+apt-get install curl git -y
 
 ##CentOS
 yum update -y
-yum install curl -y
+yum install curl git -y
 
+git clone https://github.com/timothymiller/cloudflare-ddns
+cd cloudflare-ddns
+chmod +x ./start-sync.sh
+./start-sync.sh
+
+crontab -e
+
+*/15 * * * * /root/cloudflare-ddns/start-sync.sh
+
+
+
+
+
+
+
+免费版dynu 
 curl "https://api.dynu.com/nic/update?hostname=您申請的域名&password=您Dynu帳戶的IP密碼"
 
 ## 返回下面信息表示成功 ##
@@ -17,3 +33,4 @@ crontab -e
 按i进入编辑模式，貼上下方命令，並按esc一下，再输入:wq保存
 */1 * * * * curl "https://api.dynu.com/nic/update?hostname=您申請的域名&password=您Dynu帳戶的IP密碼"
  > /dev/null 2>&1
+ 
