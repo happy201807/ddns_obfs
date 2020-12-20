@@ -1,7 +1,7 @@
 v2-plugin TLS
 
 
-ENV  Debian 9
+ENV  Ubuntu 18.04LTS
 
 使用腳本讓VPS自動更新DDNS  
 
