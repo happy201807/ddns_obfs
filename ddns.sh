@@ -1,6 +1,6 @@
 ##Debian/Ubuntu
 apt-get update
-apt-get install curl git python3 python3-venv
+apt-get install curl git python3
 
 git clone https://github.com/timothymiller/cloudflare-ddns
 cd cloudflare-ddns
