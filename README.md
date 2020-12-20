@@ -1,7 +1,7 @@
 v2-plugin TLS
 
 
-ENV  Debian 10
+ENV  Debian 9
 
 使用腳本讓VPS自動更新DDNS  
 
