@@ -15,6 +15,7 @@ Docker
 
 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
 
+docker container rm $(docker container ps -aq)
 
 编译安装shadowsocks-libev
 
