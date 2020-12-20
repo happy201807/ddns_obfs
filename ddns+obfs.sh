@@ -1,4 +1,4 @@
-obfs
+obfs   host=p6.myspeedmeter.net.prod.hosts.ooklaserver.net
 
 CentOS 7.0
 
