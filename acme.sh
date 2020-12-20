@@ -7,18 +7,16 @@ cd acme.sh
 ./acme.sh --install
 
 
-利用dnsapi dynu 申请ssl证书
-Use Dynu API
-First you need to create/obtain API credentials from your Dynu account. See: https://www.dynu.com/resources/api/documentation
+利用dns手动模式 申请ssl证书
 
-export Dynu_ClientId="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-export Dynu_Secret="yyyyyyyyyyyyyyyyyyyyyyyyy"
-Ok, let's issue a cert now:
+1.First step:
+acme.sh --issue -d example.com --dns \
+ --yes-I-know-dns-manual-mode-enough-go-ahead-please
+ 
+2.Please add the TXT record to your DNS records. This step is required every time you renew your certificate. 
 
-acme.sh --issue --dns dns_dynu -d example.com -d www.example.com
-The Dynu_ClientId and Dynu_Secret will be saved in ~/.acme.sh/account.conf and will be reused when needed.
 
-手动申请ssl
-sudo certbot --manual --preferred-challenges dns certonly
+3.Now retry with command.--renew
 
-nslookup -q=TXT _acme-challenge.二级域名 1.1.1.1
+acme.sh --renew -d example.com \
+  --yes-I-know-dns-manual-mode-enough-go-ahead-please
