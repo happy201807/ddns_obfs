@@ -18,7 +18,7 @@ docker pull acrisliu/shadowsocks-libev
 
 docker run.yml
 
-（停止并重新运行docker）
+###停止并重新运行docker###
 
 docker stop ID
 
