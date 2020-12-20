@@ -14,7 +14,11 @@ yum update && yum install curl
 
 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
 
-停止并重新运行docker
+docker pull acrisliu/shadowsocks-libev
+
+docker.yml
+
+（停止并重新运行docker）
 
 docker stop ID
 
