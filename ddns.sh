@@ -5,7 +5,7 @@ apt-get install curl git -y
 git clone https://github.com/timothymiller/cloudflare-ddns
 cd cloudflare-ddns
 cp config-example.json config.json
-nano config.json
+nano config.json  ##gist
 chmod +x ./start-sync.sh
 ./start-sync.sh
 
