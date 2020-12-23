@@ -1,18 +1,18 @@
 ##Debian/Ubuntu
 apt-get update
-apt-get install curl git python3
+apt-get install curl git
 
 git clone https://github.com/timothymiller/cloudflare-ddns.git
 cd cloudflare-ddns
 cp config-example.json config.json
 nano config.json  ##gist
-chmod 777 *
-./start-sync.sh
 
-crontab -e
+curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+docker pull timothyjmiller/cloudflare-ddns
+nano docker-compose.yml
 
-*/15 * * * * /root/cloudflare-ddns/start-sync.sh
 
+docker-compose up -d
 
 
 
