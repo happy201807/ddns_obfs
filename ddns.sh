@@ -7,12 +7,10 @@ cd cloudflare-ddns
 cp config-example.json config.json
 nano config.json  ##gist
 
-curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
-docker pull timothyjmiller/cloudflare-ddns
-nano docker-compose.yml
+sudo chmod +x ./docker-build.sh
+./docker-build.sh
 
-
-docker-compose up -d
+docker run -d  timothyjmiller/cloudflare-ddns:latest
 
 
 
