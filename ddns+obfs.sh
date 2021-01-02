@@ -10,7 +10,7 @@ ddns.sh
 
 shadowsocks.sh
 
-wget https://raw.githubusercontent.com/happy201807/ddns-obfs/main/shadowsocks.sh && bash shadowsocks.sh
+wget https://raw.githubusercontent.com/happy201807/v2/main/shadowsocks.sh && bash shadowsocks.sh
 
 编辑配置文件 nano /etc/ss.json
 
