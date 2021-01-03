@@ -1,7 +1,7 @@
 #!/bin/bash
 #install dependencies
-yum upgrade
-yum install pcre pcre-devel git gettext gcc autoconf libtool automake make asciidoc xmlto c-ares-devel libev-devel
+yum upgrade -y
+yum install -y pcre pcre-devel git gettext gcc autoconf libtool automake make asciidoc xmlto c-ares-devel libev-devel
 
 export LIBSODIUM_VER=1.0.18
 wget https://download.libsodium.org/libsodium/releases/libsodium-$LIBSODIUM_VER.tar.gz
