@@ -2,16 +2,6 @@
 apt-get update
 apt-get install curl git
 
-git clone https://github.com/timothymiller/cloudflare-ddns.git
-cd cloudflare-ddns
-cp config-example.json config.json
-nano config.json  ##gist
-
-sudo chmod +x ./docker-build.sh
-./docker-build.sh
-
-docker run -d  timothyjmiller/cloudflare-ddns:latest
-
 
 
 
@@ -31,3 +21,5 @@ crontab -e
 */1 * * * * curl "https://api.dynu.com/nic/update?hostname=您申請的域名&password=您Dynu帳戶的IP密碼"
  > /dev/null 2>&1
  
+30 06 * * * /sbin/wifi up  #每天6：30开启所有无线
+59 23 * * * /sbin/wifi down #每天晚上23点关闭
