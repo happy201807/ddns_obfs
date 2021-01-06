@@ -1,14 +1,14 @@
 v2-plugin TLS
 
 
-ENV  Debian 9
+ENV  Debian 10
 
-使用腳本讓VPS自動更新DDNS  
+ddns add
 
 ddns.sh
 
 
-安装Docker  
+install Docker  
 
 apt update && apt install curl
 
@@ -18,7 +18,7 @@ docker pull acrisliu/shadowsocks-libev
 
 docker run.yml
 
-###停止并重新运行docker###
+###stop＆restart docker###
 
 docker stop ID
 
@@ -28,7 +28,7 @@ docker container rm $(docker container ps -aq)
 
 
 
-安装BBR plus加速
+run BBR plus
 
 wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
 
