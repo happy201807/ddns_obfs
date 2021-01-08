@@ -20,11 +20,17 @@ docker run.yml
 
 ###stop＆restart docker###
 
+debian
+
 docker stop ID
 
 docker container rm $(docker container ps -aq)
 
+centos 7
 
+docker stop $(docker ps -a -q)
+
+docker rm $(docker ps -a -q)
 
 
 
