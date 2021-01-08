@@ -1,14 +1,14 @@
 v2-plugin TLS
 
 
-ENV  Debian 10
+#ENV  Debian 10
 
-ddns add
+#ddns add
 
 ddns.sh
 
 
-install Docker  
+#install Docker  
 
 apt update && apt install curl
 
@@ -20,13 +20,13 @@ docker run.yml
 
 ###stop＆restart docker###
 
-debian
+###Debian 10###
 
 docker stop ID
 
 docker container rm $(docker container ps -aq)
 
-centos 7
+###CentOS 7###
 
 docker stop $(docker ps -a -q)
 
@@ -34,11 +34,11 @@ docker rm $(docker ps -a -q)
 
 systemctl start docker
 
-sudo systemctl enable docker
+systemctl enable docker
 
 
 
-run BBR plus
+#run BBR plus
 
 wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
 
