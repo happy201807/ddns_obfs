@@ -32,6 +32,10 @@ docker stop $(docker ps -a -q)
 
 docker rm $(docker ps -a -q)
 
+systemctl start docker
+
+sudo systemctl enable docker
+
 
 
 run BBR plus
