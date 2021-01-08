@@ -10,7 +10,7 @@ ddns.sh
 
 shadowsocks.sh
 
-wget https://raw.githubusercontent.com/happy201807/v2/main/shadowsocks.sh && bash shadowsocks.sh
+wget https://raw.githubusercontent.com/happy201807/v2/main/centos7_shadowsocks.sh && bash centos7_shadowsocks.sh
 
 编辑配置文件 nano /etc/ss.json
 
@@ -22,7 +22,7 @@ wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-
 
 编译安装obfs
 
-obfs.sh
+centos7_obfs.sh
 
 添加启动服务
 
