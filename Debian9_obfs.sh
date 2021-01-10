@@ -23,7 +23,7 @@ wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-
 
 添加启动服务
 
-nano /usr/lib/systemd/system/shadowsocks.service
+nano /usr/lib/systemd/shadowsocks.service
 
 shadowsocks.service
 
