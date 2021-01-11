@@ -21,4 +21,4 @@ acme.sh --issue -d example.com --dns \
 acme.sh --renew -d example.com \
   --yes-I-know-dns-manual-mode-enough-go-ahead-please
 
-假设域名为xxx.club,打开电脑“开始”——“运行”，输入cmd后按回车键，输入：nslookup -type=txt www.domain.com 223.5.5.5
+假设域名为www.domain.com,打开电脑“开始”——“运行”，输入cmd后按回车键，输入：nslookup -type=txt www.domain.com 223.5.5.5
