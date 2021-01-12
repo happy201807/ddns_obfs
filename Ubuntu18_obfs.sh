@@ -1,6 +1,7 @@
 obfs   host=p6.myspeedmeter.net.prod.hosts.ooklaserver.net
 
-ENV  Debian 9
+
+ENV  Ubuntu 18
 
 
 编译安装shadowsocks-libev
