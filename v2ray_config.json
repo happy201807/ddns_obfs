@@ -6,14 +6,14 @@
     },
   "inbounds": [
     {
-    "port":51820,
-      "listen": "127.0.0.1", 
+    "port":31882,
+      "listen": "10.0.11.30", 
       "tag": "vmess-in", 
       "protocol": "vmess", 
       "settings": {
         "clients": [
           {
-	  "id":"8b8aaf8c-c6e7-4d0f-8a72-7f6b12e1bfaa",
+	  "id":"8b8aaf8c-c6e7-4d0f-8a72-7f6b12e1bf0d",
 	  "alterId":64
           }
         ]
@@ -21,7 +21,7 @@
       "streamSettings": {
         "network": "ws", 
         "wsSettings": {
-	  "path":"/4ec07871daa/"
+	  "path":"/4ec07871d34/"
         }
       }
     }
