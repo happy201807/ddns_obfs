@@ -14,3 +14,5 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/happy201807/v2/
 
 
 
+#bt WEB
+wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh && bash install.sh
