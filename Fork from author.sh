@@ -37,7 +37,7 @@ echo "Caddy installation completed"
 
 echo "Installing naiveproxy"
 curl -s "https://api.github.com/repos/klzgrad/naiveproxy/releases/latest" | \
-	grep linux-x64 | grep browser_download_url | \
+	grep linux-arm64 | grep browser_download_url | \
 	cut -d : -f 2,3 | tr -d \" | wget -qi -
 
 tar -xvf naive*tar.xz
