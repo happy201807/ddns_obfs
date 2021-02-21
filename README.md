@@ -27,4 +27,4 @@ wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh && bash i
 
 wget https://raw.githubusercontent.com/happy201807/v2/main/iptables.sh && bash iptables.sh
 
-@proxysu proxysu released this on 20 Nov 2020 
+@proxysu v2.4.24 proxysu released this on 20 Nov 2020 
