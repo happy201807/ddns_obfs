@@ -31,10 +31,10 @@ wget https://raw.githubusercontent.com/happy201807/v2/main/iptables.sh && bash i
 
 # function configure_web() {
 
-  rm -rf /www/xray_web
-  mkdir -p /www/xray_web
-  该处保留引用源
   wget -O web.tar.gz https://github.com/jiuqi9997/xray-yes/raw/main/web.tar.gz
+  
   tar xzf web.tar.gz -C /www/xray_web
+  
   judge "站点伪装"
+  
   rm -f web.tar.gz
