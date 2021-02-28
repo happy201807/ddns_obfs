@@ -33,6 +33,11 @@ wget https://raw.githubusercontent.com/happy201807/v2/main/iptables.sh && bash i
 
   wget -O web.tar.gz https://github.com/jiuqi9997/xray-yes/raw/main/web.tar.gz
   
+# xray start  
+sudo systemctl start xray.service
+
+sudo systemctl status xray.service
+  
   tar xzf web.tar.gz -C /www/xray_web
   
   judge "站点伪装" "web_camouflage"
