@@ -35,6 +35,6 @@ wget https://raw.githubusercontent.com/happy201807/v2/main/iptables.sh && bash i
   
   tar xzf web.tar.gz -C /www/xray_web
   
-  judge "站点伪装"
+  judge "站点伪装" "web_camouflage"
   
   rm -f web.tar.gz
