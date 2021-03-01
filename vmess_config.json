@@ -1,81 +1,34 @@
 {
-  "log": {
-    "loglevel": "warning"
-  },
-  "inbounds": [
-    {
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls"
-        ]
-      },
-      "port": 33461,
-      "listen": "0.0.0.0",
-      "tag": "vmess-ws-in",
-      "protocol": "vmess",
-      "settings": {
-        "clients": [
-          {
-            "id": "a41d1015-62e9-4d64-ba1c-764699a76bb5",
-            "alterId": 10
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "wsSettings": {
-          "acceptProxyProtocol": true,
-          "path": "/v2ray/d060ba132/"
+  "inbounds": [{
+    "port": 33461, #此端口在后面反代要用
+    "protocol": "vmess",
+    "settings": {
+      "clients": [
+        {
+          "id": "a41d1015-62e9-4d64-ba1c-764699a76bb5", #uuid 客户端连接要用
+          "level": 1,
+          "alterId": 0
         }
-      }
-    }
-  ],
-  "outbounds": [
-    {
-      "protocol": "freedom",
-      "settings": {},
-      "tag": "direct"
+      ]
     },
-    {
-      "protocol": "blackhole",
-      "settings": {},
-      "tag": "blocked"
-    }
-  ],
-  "dns": {
-    "servers": [
-      "https+local://1.1.1.1/dns-query",
-      "1.1.1.1",
-      "1.0.0.1",
-      "8.8.8.8",
-      "8.8.4.4",
-      "localhost"
-    ]
-  },
+      "streamSettings": {
+        "network":"ws"
+      }    
+  }],
+  "outbounds": [{
+      "protocol": "freedom",  
+      "settings": {}
+  },{
+    "protocol": "blackhole",
+    "settings": {},
+    "tag": "blocked"
+  }],
   "routing": {
     "rules": [
       {
-        "ip": [
-          "geoip:private"
-        ],
-        "outboundTag": "blocked",
-        "type": "field"
-      },
-      {
         "type": "field",
-        "outboundTag": "blocked",
-        "protocol": [
-          "bittorrent"
-        ]
-      },
-      {
-        "type": "field",
-        "inboundTag": [
-          "vmess-ws-in"
-        ],
-        "outboundTag": "direct"
+        "ip": ["geoip:private"],
+        "outboundTag": "blocked"
       }
     ]
   }
