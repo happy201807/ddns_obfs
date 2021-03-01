@@ -12,49 +12,23 @@
         ]
       },
       "port": 33461,
-      "listen": "127.0.0.1",
-      "tag": "vmess-ws-in",
-      "protocol": "VLESS",
+      "listen": "0.0.0.0",
+      "tag": "vless-ws-in",
+      "protocol": "vless",
       "settings": {
         "clients": [
           {
             "id": "a41d1015-62e9-4d64-ba1c-764699a76bb5",
-            "alterId": 0
+            "level": 0
           }
-        ]
+        ],
+        "decryption": "none"
       },
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
           "acceptProxyProtocol": true,
           "path": "/v2ray/d060ba132/"
-        }
-      }
-    },
-    {
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls"
-        ]
-      },
-      "port": 25098,
-      "listen": "127.0.0.1",
-      "tag": "vmess-tcp-in",
-      "protocol": "vmess",
-      "settings": {
-        "clients": [
-          {
-            "id": "f762e3ef-3969-4aa6-9375-3e8e5d19494d",
-            "alterId": 10
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "tcpSettings": {
-          "acceptProxyProtocol": true
         }
       }
     }
@@ -100,8 +74,7 @@
       {
         "type": "field",
         "inboundTag": [
-          "vmess-ws-in",
-          "vmess-tcp-in"
+          "vless-ws-in"
         ],
         "outboundTag": "direct"
       }
