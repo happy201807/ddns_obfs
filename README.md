@@ -41,8 +41,8 @@ wget https://raw.githubusercontent.com/happy201807/v2/main/iptables.sh && bash i
   
 # xray start  
 
-sudo systemctl start xray.service
+sudo systemctl start v2ray
 
-sudo systemctl status xray.service
+sudo systemctl status v2ray
   
 
