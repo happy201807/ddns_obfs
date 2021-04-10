@@ -1,5 +1,5 @@
 obfs   host=p6.myspeedmeter.net.prod.hosts.ooklaserver.net
-
+software-download.microsoft.com
 
 ENV  Ubuntu 18
 
