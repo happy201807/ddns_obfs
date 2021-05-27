@@ -45,4 +45,8 @@ sudo systemctl start v2ray
 
 sudo systemctl status v2ray
   
+# oracle 开启Ubuntu 20 所有端口 
 
+wget -N --no-check-certificate https://raw.githubusercontent.com/YG-tsj/Oracle-warp/main/multi.sh && chmod +x multi.sh && ./multi.sh
+
+1
