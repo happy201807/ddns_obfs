@@ -49,4 +49,4 @@ sudo systemctl status v2ray
 
 wget -N --no-check-certificate https://raw.githubusercontent.com/YG-tsj/Oracle-warp/main/multi.sh && chmod +x multi.sh && ./multi.sh
 
-1
+1  删除iptables
