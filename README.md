@@ -45,8 +45,6 @@ sudo systemctl start v2ray
 
 sudo systemctl status v2ray
   
-# oracle 开启Ubuntu 20 所有端口 
+# oracle 开启Ubuntu 20 所有端口 #删除iptables
 
-wget -N --no-check-certificate https://raw.githubusercontent.com/YG-tsj/Oracle-warp/main/multi.sh && chmod +x multi.sh && ./multi.sh
-
-1  删除iptables
+rm -rf /etc/iptables && reboot
